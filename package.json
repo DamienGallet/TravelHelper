@@ -15,7 +15,8 @@
       "mocha" : "~1.2",
       "node-wit" : "~4.2.0",
       "flow-bin" : "~0.36.0",
-      "semistandard": "*"
+      "semistandard": "*",
+      "moment": "*"
   },
   "keywords": [
     "bot",
