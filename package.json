@@ -1,0 +1,28 @@
+{
+  "name": "travelhelper",
+  "version": "1.0.0",
+  "description": "Tiny bot which helps you to plan your next trips",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamienGallet/TravelHelper.git"
+  },
+  "dependencies" : {
+      "mocha" : "~1.2",
+      "node-wit" : "~4.2.0"
+  },
+  "keywords": [
+    "bot",
+    "travel",
+    "wit"
+  ],
+  "author": "damiengallet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamienGallet/TravelHelper/issues"
+  },
+  "homepage": "https://github.com/DamienGallet/TravelHelper#readme"
+}
