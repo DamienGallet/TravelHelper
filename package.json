@@ -4,7 +4,8 @@
   "description": "Tiny bot which helps you to plan your next trips",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "semistandard && node ./node_modules/mocha/bin/mocha",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,9 @@
   },
   "dependencies" : {
       "mocha" : "~1.2",
-      "node-wit" : "~4.2.0"
+      "node-wit" : "~4.2.0",
+      "flow-bin" : "~0.36.0",
+      "semistandard": "*"
   },
   "keywords": [
     "bot",
