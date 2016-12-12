@@ -5,18 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "semistandard && node ./node_modules/mocha/bin/mocha",
-    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+    "flow": "flow check",
+    "unit": "mocha",
+    "start": "babel app --out-dir build && node build/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DamienGallet/TravelHelper.git"
   },
-  "dependencies" : {
-      "mocha" : "~1.2",
-      "node-wit" : "~4.2.0",
-      "flow-bin" : "~0.36.0",
-      "semistandard": "*",
-      "moment": "*"
+  "dependencies": {
+    "mocha": "~1.2",
+    "chai": "*",
+    "node-wit": "~4.2.0",
+    "flow-bin": "~0.36.0",
+    "semistandard": "*",
+    "moment": "*",
+    "babel-cli": "*",
+    "react-tools": "^0.12.2",
+    "babel-plugin-transform-flow-strip-types": "*"
   },
   "keywords": [
     "bot",
@@ -28,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/DamienGallet/TravelHelper/issues"
   },
-  "homepage": "https://github.com/DamienGallet/TravelHelper#readme"
+  "homepage": "https://github.com/DamienGallet/TravelHelper#readme",
+  "devDependencies": {
+    "flow-bin": "^0.36.0"
+  }
 }
