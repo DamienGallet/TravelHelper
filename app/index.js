@@ -18,9 +18,6 @@ var actions:Object = {
     return new Promise((resolve, reject) => {
       if (text) {
         console.log(text);
-        // TODO : Remove
-        console.log(JSON.stringify(response));
-        console.log(request);
       } else {
         console.log('The response contains a quick reply, we cannot manage it for now');
       }
@@ -29,12 +26,10 @@ var actions:Object = {
   },
 
   merge ({context, entities}:{context: Object, entities:Object}) {
-    console.log("MERGING");
     return new Promise((resolve, reject) => {
       // we seek in all the attributes of the object, to load their value in the context
       context = utilities.loadEntitiesInContext(context, entities);
 
-      console.log(JSON.stringify(context));
       return resolve(context);
     });
   },
@@ -44,8 +39,6 @@ var actions:Object = {
    */
   calculateDuration ({context, entities}:{context: Object, entities: Object}) {
     return new Promise((resolve, reject) => {
-      // TODO: Remove
-      console.log(JSON.stringify(entities));
 
       // Not enough data
       if (!context.travelEnd || !context.travelBegin) {
