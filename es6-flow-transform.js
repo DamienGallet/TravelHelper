@@ -8,7 +8,7 @@ var fn = module.exports = function () {
       ReactTools.transform(
         fs.readFileSync(filename, 'utf8'),
         {stripTypes: true, harmony: true}),
-      filename)
+      filename);
   };
 };
 

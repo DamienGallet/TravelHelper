@@ -2,27 +2,20 @@
   "name": "travelhelper",
   "version": "1.0.0",
   "description": "Tiny bot which helps you to plan your next trips",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "semistandard && node ./node_modules/mocha/bin/mocha",
-    "flow": "flow check",
-    "unit": "mocha",
-    "start": "babel app --out-dir build && node build/index.js"
+    "test": "flow check && babel app --out-dir build && semistandard && mocha",
+    "build": "babel app --out-dir build",
+    "start": "node build/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DamienGallet/TravelHelper.git"
   },
   "dependencies": {
-    "mocha": "~1.2",
-    "chai": "*",
     "node-wit": "~4.2.0",
-    "flow-bin": "~0.36.0",
-    "semistandard": "*",
     "moment": "*",
-    "babel-cli": "*",
-    "react-tools": "^0.12.2",
-    "babel-plugin-transform-flow-strip-types": "*"
+    "lodash": "~4.17.2"
   },
   "keywords": [
     "bot",
@@ -36,6 +29,15 @@
   },
   "homepage": "https://github.com/DamienGallet/TravelHelper#readme",
   "devDependencies": {
-    "flow-bin": "^0.36.0"
-  }
+    "flow-bin": "^0.36.0",
+    "flow-bin": "~0.36.0",
+    "semistandard": "*",
+    "mocha": "~1.2",
+    "chai": "*",
+    "babel-cli": "*",
+    "react-tools": "^0.12.2",
+    "babel-plugin-transform-flow-strip-types": "*"
+  },
+  "//": "This key is here to avoid problems with semistandard checking",
+  "env": [ "mocha" ]
 }
